@@ -1,10 +1,10 @@
-import { changeFilter } from '../../Redux/filterSlice';
-import { useDispatch } from 'react-redux';
-import Container from './Filter.styled';
+import { filter } from "../../Redux/filterSlice";
+import { useDispatch } from "react-redux";
+import Container from "./Filter.styled";
 export const Filter = () => {
   const dispatch = useDispatch();
-  const handleFilter = e => {
-    dispatch(changeFilter(e.currentTarget.value));
+  const handleFilter = (e) => {
+    dispatch(filter(e.currentTarget.value));
   };
   return (
     <Container>
